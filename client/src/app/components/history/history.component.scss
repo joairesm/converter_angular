@@ -1,0 +1,28 @@
+@import '../../guide.scss';
+
+table{
+    width: 100%;
+}
+
+button{
+    visibility: hidden;
+    font-weight: bold;
+    font-size: 10px;
+    margin: 1px;
+}
+
+button.delete{
+    color: $Warn-Color;
+}
+
+button.view{
+    color: $Primary-Color;
+}
+
+tr{
+    &:hover{
+        button{
+            visibility: visible;
+        }
+    }
+}

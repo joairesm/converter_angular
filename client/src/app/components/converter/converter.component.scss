@@ -1,0 +1,50 @@
+@import "../../guide.scss";
+
+.form, .result{
+    width: 600px;
+    margin: auto;
+}
+
+mat-form-field{
+    margin: 10px;
+}
+
+.small{
+    width: 100px;
+}
+
+.normal{
+    width: 130px;
+}
+
+.result{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+    text-transform: uppercase;
+
+    .hightlight{
+        font-weight: 500;
+        color: $Accent-Color;
+    }
+
+    .rates{
+        line-height: 8px;
+        font-weight: 300;
+        font-size: 14px;
+    }
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 2em 0;
+    padding: 0;
+    opacity: 0.5;
+}
+
+input{
+    text-transform: uppercase;
+}

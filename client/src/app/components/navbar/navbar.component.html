@@ -1,0 +1,13 @@
+<nav mat-tab-nav-bar>
+  <span id="logo">Currency<b>Exchange</b></span>
+    <div *ngIf="logged | async">
+        <a mat-tab-link
+        *ngFor="let link of navLinks"
+        [routerLink]="link.path"
+        routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">
+        {{link.label}}
+      </a>
+    </div>
+    <button *ngIf="logged | async" mat-button (click)="logout()" class="logout-button secondary">LOGOUT</button>
+</nav>

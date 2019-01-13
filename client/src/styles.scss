@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+///@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "./app/guide.scss";
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+$primary: mat-palette($mat-teal,600);
+$accent: mat-palette($mat-orange,200);
+
+$theme: mat-light-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+.page-title{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.section-title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: $Text-Color;
+    background-color: #eeeeee
+}
+
+button.action {
+    background-color: $Primary-Color;
+    color: white;
+    width: 100px;
+}
+
+button.secondary{
+    color: $Primary-Color;
+}

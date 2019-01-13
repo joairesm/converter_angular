@@ -1,0 +1,30 @@
+<h1>I WANT TO CONVERT</h1>
+<div class="form">
+    <mat-form-field class="small">
+        <input [(ngModel)]="convertAmount_raw" type="number" matInput placeholder="Amount">
+    </mat-form-field>
+    <mat-form-field class="normal">
+        <input [(ngModel)]="convertFrom_raw" type="text" matInput placeholder="From">
+    </mat-form-field>
+    <button (click)="switch()" class="secondary" mat-raised-button>
+        <i class="material-icons">compare_arrows</i>
+    </button>
+    <mat-form-field
+    class="normal">
+        <input [(ngModel)]="convertTo_raw" type="text" matInput placeholder="To">
+    </mat-form-field>
+    <button (click)="convertClick()" class="action" mat-raised-button>CONVERT</button>
+</div>
+<div *ngIf="(lastLog | async)" class="result">
+        <p>{{(lastLog | async).amount}} {{(lastLog | async).from}} = <span class="hightlight">{{(lastLog | async).result | number : '1.2-2'}} {{(lastLog | async).to}}</span></p>
+    <div class="rates">
+        <p>1 {{(lastLog | async).from}} = {{(lastLog | async).rate | number : '1.2-2'}} {{(lastLog | async).to}}</p>
+        <p>1 {{(lastLog | async).to}} = {{(lastLog | async).rateBack | number : '1.2-2'}} {{(lastLog | async).from}}</p>
+    </div>
+</div>
+
+<app-hconverter
+    *ngIf="(lastLog | async)"
+    [convertFrom]="(lastLog | async).from"
+    [convertTo]="(lastLog | async).to"
+    ></app-hconverter>

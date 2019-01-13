@@ -1,0 +1,17 @@
+<div class="login-box">
+    <h1>Login</h1>
+        <p>
+        <mat-form-field>
+            <input matInput [(ngModel)]="username" placeholder="Username">
+        </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field>
+                <input matInput [(ngModel)]="password" placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <button [disabled]="username=='' || password==''" class="action" (click)="login()" mat-raised-button>LOGIN</button>
+        </p>
+</div>
