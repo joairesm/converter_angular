@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "currencyconverter": "angular-converter-currency",
+    "default": "angular-converter-currency"
+  }
+}

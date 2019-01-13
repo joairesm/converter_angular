@@ -4,14 +4,14 @@
         <input [(ngModel)]="convertAmount_raw" type="number" matInput placeholder="Amount">
     </mat-form-field>
     <mat-form-field class="normal">
-        <input [(ngModel)]="convertFrom_raw" type="text" matInput placeholder="From">
+        <input [(ngModel)]="convertFrom_raw" type="text" matInput placeholder="From (EUR)">
     </mat-form-field>
     <button (click)="switch()" class="secondary" mat-raised-button>
         <i class="material-icons">compare_arrows</i>
     </button>
     <mat-form-field
     class="normal">
-        <input [(ngModel)]="convertTo_raw" type="text" matInput placeholder="To">
+        <input [(ngModel)]="convertTo_raw" type="text" matInput placeholder="To (USD)">
     </mat-form-field>
     <button (click)="convertClick()" class="action" mat-raised-button>CONVERT</button>
 </div>

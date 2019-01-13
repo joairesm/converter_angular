@@ -2,12 +2,12 @@
     <h1>Login</h1>
         <p>
         <mat-form-field>
-            <input matInput [(ngModel)]="username" placeholder="Username">
+            <input matInput [(ngModel)]="username" placeholder="user1">
         </mat-form-field>
         </p>
         <p>
             <mat-form-field>
-                <input matInput [(ngModel)]="password" placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                <input matInput [(ngModel)]="password" placeholder="pass1" [type]="hide ? 'password' : 'text'">
                 <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </mat-form-field>
         </p>
